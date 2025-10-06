@@ -21,71 +21,62 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Shopping List"),
-        backgroundColor: Colors.blue,
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(8),
-        child: GridView.builder(
-          itemCount: items.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, // dua kolom
-            crossAxisSpacing: 8,
-            mainAxisSpacing: 8,
-            childAspectRatio: 0.75, // tinggi-lebar card
-          ),
-          itemBuilder: (context, index) {
+    return MaterialApp(
+      title: 'Shopping List',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Shopping List'),
+          backgroundColor: Colors.blue,
+        ),
+        body: GridView.count(
+          crossAxisCount: 2, // dua kolom
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 8,
+          childAspectRatio: 0.68,
+          padding: EdgeInsets.all(8),
+          children: List.generate(items.length, (index) {
             final item = items[index];
             return InkWell(
               onTap: () {
                 Navigator.pushNamed(context, '/item', arguments: item);
               },
               child: Card(
-                elevation: 3,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                                    children: [
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                     Expanded(
-                      child: ClipRRect(
-                        borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                      child: SizedBox.expand(
                         child: Image.asset(
                           item.image,
-                          fit: BoxFit.cover,
+                          fit: BoxFit.contain,
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             item.name,
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                            ),
+                            style: TextStyle(fontWeight: FontWeight.bold),
                           ),
-                          const SizedBox(height: 4),
                           Text(
                             'Rp ${item.price}',
-                            style: const TextStyle(color: Colors.green),
+                            style: TextStyle(color: Colors.green),
                           ),
                           const SizedBox(height: 4),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.star, color: Colors.amber, size: 16),
-                              Text(item.rating.toString()),
+                              Text(item.stok.toString(), style: const TextStyle(fontSize: 14)),
                               const Spacer(),
-                              Text(
-                                'Stok: ${item.stok}',
-                                style: const TextStyle(fontSize: 12),
-                              ),
+                              Icon(Icons.star, color: Colors.amber, size: 12),
+                              SizedBox(width: 4),
+                              Text(item.rating.toString()),
                             ],
                           ),
                         ],
@@ -95,7 +86,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             );
-          },
+          }),
         ),
       ),
     );

@@ -10,7 +10,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Shopping List")),
+      appBar: AppBar(
+        title: Text("Shopping List"),
+        backgroundColor: Colors.blue),
       body: Container(
         margin: EdgeInsets.all(8),
         child: ListView.builder(
@@ -20,7 +22,7 @@ class HomePage extends StatelessWidget {
             final item = items[index];
             return InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/item');
+                Navigator.pushNamed(context, '/item', arguments: item);
               },
               child: Card(
                   child: Container(

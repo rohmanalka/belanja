@@ -54,6 +54,10 @@ flutter:
   assets:
     - assets/sugar.jpg
     - assets/salt.jpeg
+    - assets/manchestercp.jpeg
+    - assets/sifelpa.jpeg
+    - assets/tnfmp3.jpeg
+    - assets/birming.jpeg
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

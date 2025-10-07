@@ -4,6 +4,7 @@ class Item {
   int stok;
   double rating;
   String image;
+  String desk;
 
   Item({
     required this.name,
@@ -11,5 +12,6 @@ class Item {
     required this.stok,
     required this.rating,
     required this.image,
+    required this.desk,
   });
 }

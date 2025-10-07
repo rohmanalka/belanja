@@ -1,5 +1,7 @@
+import 'package:belanja/widgets/footer.dart';
 import 'package:flutter/material.dart';
 import '../models/item.dart';
+import '../widgets/item_card.dart';
 
 class HomePage extends StatelessWidget {
   final List<Item> items = [
@@ -55,79 +57,13 @@ class HomePage extends StatelessWidget {
         itemCount: items.length,
         itemBuilder: (context, index) {
           final item = items[index];
-          return InkWell(
-            onTap: () {
-              Navigator.pushNamed(context, '/item', arguments: item);
-            },
-            child: Card(
-              elevation: 3,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Hero(
-                    tag: 'item-${item.name}',
-                    child: AspectRatio(
-                      aspectRatio: 1,
-                      child: Image.asset(
-                        item.image,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          item.name,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
-                          ),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        SizedBox(height: 4),
-                        Text(
-                          'Rp ${item.price}',
-                          style: TextStyle(
-                            color: Colors.redAccent,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 13,
-                          ),
-                        ),
-                        SizedBox(height: 4),
-                        Row(
-                          children: [
-                            Icon(Icons.star,
-                                color: Colors.amber, size: 14),
-                            SizedBox(width: 4),
-                            Text(
-                              item.rating.toString(),
-                              style: TextStyle(fontSize: 12),
-                            ),
-                            Spacer(),
-                            Text(
-                              'Stok: ${item.stok}',
-                              style: TextStyle(
-                                  fontSize: 12, color: Colors.grey),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+          return ItemCard(
+            item: item,
+            onTap: () => Navigator.pushNamed(context, '/item', arguments: item),
           );
         },
       ),
+      bottomNavigationBar: Footer(),
     );
   }
 }

@@ -6,7 +6,7 @@
 **Kelas:** SIB 3C  
 **No Absen:** 26  
 
-**Repository:** [PMB_JS05 - Layout dan Navigasi](https://github.com/rohmanalka/belanja)
+**Repository:** [PMB_JS05 - Layout dan Navigasi](https://github.com/rohmanalka/belanja)  
 📄 **[Klik di sini untuk melihat laporan lengkap](https://github.com/rohmanalka/belanja/blob/main/Jobsheet5_26_SIB3C_Muhammad%20Rohman%20Al%20Kautsar.pdf)**  
 
 ---

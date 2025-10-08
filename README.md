@@ -1,10 +1,10 @@
 # 📱 Praktikum Flutter — Layout dan Navigasi
 
-**Mata Kuliah:** Pemrograman Mobile
-**Nama:** Muhammad Rohman Al Kautsar
-**NIM:** 2341760055 
+**Mata Kuliah:** Pemrograman Mobile  
+**Nama:** Muhammad Rohman Al Kautsar  
+**NIM:** 2341760055  
 **Kelas:** SIB 3C  
-**No Absen:** 26
+**No Absen:** 26  
 
 **Repository:** [PMB_JS05 - Layout dan Navigasi](https://github.com/rohmanalka/belanja)
 
@@ -145,7 +145,7 @@ class HomePage extends StatelessWidget {
 ```
 - Hasil Output
   📷 **Screenshot Hasil:**  
-<p align="center>
+<p align="center">
   <img src="assets/Gp5.1.jpg" alt="Button Alert" width="250"/>
 </p>
 
@@ -235,7 +235,7 @@ class Item {
 ```
 - Hasil Output
   📷 **Screenshot Hasil:**  
-<p align="center>
+<p align="center">
   <img src="assets/Gtp2.3.jpg" alt="Button Alert" width="250"/>
 </p>
 
@@ -364,7 +364,7 @@ class MyApp extends StatelessWidget {
 ```
 - Hasil Output
   📷 **Screenshot Hasil:**  
-<p align="center>
+<p align="center">
   <img src="assets/Gtp2.5.jpg" alt="Button Alert" width="250"/>
   <img src="assets/Gtp2.4.jpg" alt="Alert Dialog" width="250"/>
 </p>

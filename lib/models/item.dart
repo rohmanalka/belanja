@@ -7,11 +7,11 @@ class Item {
   String desk;
 
   Item({
-    required this.name,
-    required this.price,
-    required this.stok,
-    required this.rating,
-    required this.image,
-    required this.desk,
+    this.name = '',
+    this.price = 0,
+    this.stok = 0,
+    this.rating = 0,
+    this.image = '',
+    this.desk = '',
   });
 }

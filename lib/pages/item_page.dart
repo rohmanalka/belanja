@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import '../models/item.dart';
 
 class ItemPage extends StatelessWidget {
-  const ItemPage({super.key});
+  final Item item;
+
+  const ItemPage({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
-    final itemArgs = ModalRoute.of(context)!.settings.arguments as Item;
-
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
@@ -20,9 +20,9 @@ class ItemPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ItemDetailHead(item: itemArgs),
+            ItemDetailHead(item: item),
             SizedBox(height: 8),
-            ItemDetailDesk(item: itemArgs),
+            ItemDetailDesk(item: item),
             SizedBox(height: 16),
           ],
         ),

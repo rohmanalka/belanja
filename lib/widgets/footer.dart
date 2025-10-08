@@ -6,7 +6,7 @@ class Footer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50, // ✅ Tinggi tetap agar tidak memenuhi layar
+      height: 50,
       color: Colors.blue,
       child: const Center(
         child: Text(

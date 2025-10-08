@@ -145,7 +145,9 @@ class HomePage extends StatelessWidget {
 ```
 - Hasil Output
   📷 **Screenshot Hasil:**  
-  ![Hasil Praktikum 5](assets/Gp5.1.jpg)
+<p align="center>
+  <img src="assets/Gp5.1.jpg" alt="Button Alert" width="250"/>
+</p>
 
 ---
 
@@ -233,7 +235,9 @@ class Item {
 ```
 - Hasil Output
   📷 **Screenshot Hasil:**  
-  ![Hasil Tugas 3](assets/Gtp2.3.jpg)
+<p align="center>
+  <img src="assets/Gtp2.3.jpg" alt="Button Alert" width="250"/>
+</p>
 
 ---
 
@@ -358,8 +362,9 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-
-- Hasil Output akhir
+- Hasil Output
   📷 **Screenshot Hasil:**  
-  ![Hasil Praktikum 2](assets/Gtp2.5.jpg)
-  ![Hasil Praktikum 2](assets/Gtp2.4.jpg)
+<p align="center>
+  <img src="assets/Gtp2.5.jpg" alt="Button Alert" width="250"/>
+  <img src="assets/Gtp2.4.jpg" alt="Alert Dialog" width="250"/>
+</p>
